@@ -21,6 +21,13 @@ const BolusForm: React.FC<BolusFormProps> = ({ onSubmit }) => {
     onSubmit(recommendedBolus);
   };
 
+  const resetHandler = () => {
+    console.log("I reset!");
+    setTotalCarbs(0);
+    setBloodGlucose(0);
+    setInsulinToCarbRatio(0);
+  };
+
   return (
     <Form onSubmit={handleFormSubmit} className={classes.form}>
       <div>
@@ -51,6 +58,13 @@ const BolusForm: React.FC<BolusFormProps> = ({ onSubmit }) => {
         />
       </div>
       <button type="submit">Calculate Recommended Bolus</button>
+      <button
+        onClick={resetHandler}
+        type="reset"
+        className={classes.resetbutton}
+      >
+        Reset
+      </button>
     </Form>
   );
 };
@@ -90,21 +104,3 @@ function calculateRecommendedBolus(
     return recommendedBolus;
   }
 }
-
-// const totalCarbsInGrams: number = 24; // Replace with the actual value in grams
-// const bloodGlucoseInMmolL: number = 2.0; // Replace with the actual value in mmol/L
-// const insulinToCarbRatioInGrams: number = 12; // Replace with the actual value in grams
-
-// const recommendedBolus: number | string = calculateRecommendedBolus(
-//   totalCarbsInGrams,
-//   bloodGlucoseInMmolL,
-//   insulinToCarbRatioInGrams
-// );
-
-// if (bloodGlucoseInMmolL < 3.5) {
-//   console.log(
-//     "Your BG is running low. Please do not take insulin now and check again after 15 mins."
-//   );
-// } else {
-//   console.log(recommendedBolus);
-// }

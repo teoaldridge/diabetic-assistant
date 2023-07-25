@@ -50,6 +50,7 @@ input:focus {
 
 button {
   padding: 10px 15px;
+  margin: 8px;
   border: none;
   border-radius: 20px;
   color: #fff;
@@ -61,4 +62,20 @@ button {
 button:hover {
   background-color: var(--color-primary-800);
   color: #1f1d1b;
+}
+
+.resetbutton {
+  padding: 10px 15px;
+  margin: 8px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  background-color: var(--color-gray-500);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.resetbutton:hover {
+  background-color: var(--color-gray-600);
+  color: #fff;
 }
