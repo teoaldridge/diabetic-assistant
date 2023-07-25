@@ -1,14 +1,17 @@
 import React from "react";
+import classes from "./BolusResults.module.css";
 
 interface BolusResultsProps {
-  recommendedBolus: number;
+  recommendedBolus: number | string;
 }
 
 const BolusResults: React.FC<BolusResultsProps> = ({ recommendedBolus }) => {
   return (
-    <div>
-      <h2>Bolus Recommendation</h2>
-      <p>Recommended Bolus: {recommendedBolus}</p>
+    <div className={classes.bolusresultscontainer}>
+      <h2 className={classes.bolusresultsheading}>Bolus Recommendation</h2>
+      <p className={classes.bolusresultstext}>
+        Recommended Bolus: {recommendedBolus} units
+      </p>
     </div>
   );
 };
