@@ -99,8 +99,8 @@ function calculateRecommendedBolus(
   const recommendedBolus: number = insulinForCarbs + correctionBolus;
 
   if (bloodGlucose < 3.5) {
-    return "Your BG is running low. Please do not take insulin now, enjoy some yummy sweets, and check again after 15 mins.";
+    return "Your BG is running low. Please do not take insulin now, enjoy some yummy sweets, and try again after 20 mins.";
   } else {
-    return `${recommendedBolus}`;
+    return `${recommendedBolus} units`;
   }
 }

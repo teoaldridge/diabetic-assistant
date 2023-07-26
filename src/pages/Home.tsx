@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const HomePage: React.FC = () => {
   return (
     <div>
-      <h1>DiaBuddy</h1>
+      <h1>Diabetic Assistant</h1>
       <h3>
         Go to <Link to="/boluscalculator">Bolus Calculator</Link>
       </h3>

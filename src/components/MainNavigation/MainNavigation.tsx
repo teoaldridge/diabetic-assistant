@@ -24,7 +24,7 @@ const MainNavigation: React.FC = () => {
                 isActive ? classes.active : undefined
               }
             >
-              Injection Rotation
+              Site Rotation
             </NavLink>
           </li>
           <li>

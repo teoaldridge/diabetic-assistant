@@ -10,7 +10,7 @@ const BolusResults: React.FC<BolusResultsProps> = ({ recommendedBolus }) => {
     <div className={classes.bolusresultscontainer}>
       <h2 className={classes.bolusresultsheading}>Bolus Recommendation</h2>
       <p className={classes.bolusresultstext}>
-        Recommended Bolus: {recommendedBolus} units
+        Recommended Bolus: {recommendedBolus}
       </p>
     </div>
   );
