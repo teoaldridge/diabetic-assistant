@@ -77,7 +77,7 @@ function calculateRecommendedBolus(
   insulinToCarbRatio: number
 ): number | string {
   // Blood Glucose target range: 80-120 mg/dL (4.4-6.7 mmol/L)
-  const targetLowerLimit: number = 4.4;
+  //const targetLowerLimit: number = 4.4;
   const targetUpperLimit: number = 8.0;
 
   // Correction Factor (CF): 1 unit per 30 mg/dL (1.67 mmol/L)

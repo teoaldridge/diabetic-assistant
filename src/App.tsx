@@ -7,7 +7,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import RotationPage from "./pages/RotationPage";
 import BolusCalculatorPage from "./pages/BolusCalculatorPage";
-import FoodCheckerPage from "./pages/FoodCheckerPage";
+import FoodCheckerPage from "./pages/FoodSearchPage";
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/ErrorPage";
 
