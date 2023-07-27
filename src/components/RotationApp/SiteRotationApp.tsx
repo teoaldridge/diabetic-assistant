@@ -1,22 +1,36 @@
 import { useState } from "react";
-import "./RotationApp.modules.css";
+import "./SiteRotationApp.modules.css";
+import SiteRotationLogs from "./SiteRotationLogs";
+import SiteLog from "../../models/sitelog";
 
-const RotationApp: React.FC = () => {
+const SiteRotationInput: React.FC = () => {
   const [injectionSite, setInjectionSite] = useState<string | null>(null);
   const [injectionDate, setInjectionDate] = useState<string>("");
   const [injectionTime, setInjectionTime] = useState<string>("");
+
+  const [listedLogs, setListedLogs] = useState<SiteLog[]>([]);
+
   const handleInjectionSiteClick = (selectedSite: string) => {
     setInjectionSite(selectedSite);
   };
+
   const handleLogInjection = () => {
     if (injectionSite && injectionDate && injectionTime) {
-      console.log("Injection Logged:", {
+      // console.log("Injection Logged:", {
+      //   site: injectionSite,
+      //   date: injectionDate,
+      //   time: injectionTime,
+      // });
+      const newLog: SiteLog = {
         site: injectionSite,
         date: injectionDate,
         time: injectionTime,
-      });
+        id: new Date().toISOString(),
+      };
+      setListedLogs((prevLogs) => [...prevLogs, newLog]);
     }
   };
+
   return (
     <div className="rotation-app-container">
       {/* Front Body image and buttons */}
@@ -94,10 +108,13 @@ const RotationApp: React.FC = () => {
           value={injectionTime}
           onChange={(e) => setInjectionTime(e.target.value)}
         />
-        <button onClick={handleLogInjection}>Log Injection</button>
+        <button className="logbutton" onClick={handleLogInjection}>
+          Log Injection / Pump Site
+        </button>
       </div>
+      <SiteRotationLogs logs={listedLogs} />
     </div>
   );
 };
 
-export default RotationApp;
+export default SiteRotationInput;

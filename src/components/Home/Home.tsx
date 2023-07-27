@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const HomePage: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <div>
       <h1>Diabetic Assistant</h1>
@@ -17,4 +17,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Home;

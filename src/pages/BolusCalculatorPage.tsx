@@ -8,7 +8,6 @@ const BolusCalculatorPage: React.FC = () => {
   >(null);
 
   const handleFormSubmit = (recommendedBolus: number | string) => {
-    // You can handle the recommendedBolus value here as needed.
     console.log("Recommended Bolus:", recommendedBolus);
     setRecommendedBolusResult(recommendedBolus);
   };

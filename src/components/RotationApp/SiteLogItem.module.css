@@ -1,0 +1,9 @@
+.logitem {
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px var(--color-gray-400);
+  padding: 1rem;
+  background-color: var(--color-gray-200);
+  color: black;
+  border-radius: 30px;
+  width: 100%;
+}
