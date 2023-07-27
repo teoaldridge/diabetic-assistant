@@ -8,7 +8,7 @@ const Home: React.FC = () => {
         Go to <Link to="/boluscalculator">Bolus Calculator</Link>
       </h3>
       <h3>
-        Go to <Link to="/foodchecker">Food Checker</Link>
+        Go to <Link to="/foodsearch">Food Checker</Link>
       </h3>
       <h3>
         Go to <Link to="/rotation">Injection/Pump Site Rotation</Link>
