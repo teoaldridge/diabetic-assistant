@@ -29,3 +29,12 @@ img {
 .logbutton {
   margin-top: 20px;
 }
+
+.selected {
+  background-color: var(--color-primary-800);
+  color: #1f1d1b;
+}
+
+.error-message {
+  margin-top: 10px;
+}

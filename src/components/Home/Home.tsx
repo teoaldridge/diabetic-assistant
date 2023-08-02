@@ -4,7 +4,7 @@ import classes from "./Home.module.css";
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>DiaBuddy</h1>
+      <h1>Diabetic Assistant</h1>
       <div className={classes.buttoncontainer}>
         <Link to="/rotation" className={classes.link}>
           <button className={classes.circlebutton}>Site Rotation</button>
