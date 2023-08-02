@@ -53,8 +53,8 @@ button {
   margin: 8px;
   border: none;
   border-radius: 20px;
-  color: #fff;
-  background-color: var(--color-primary-600);
+  color: var(--color-gray-700);
+  background-color: var(--color-primary-400);
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }

@@ -1,0 +1,39 @@
+/* Home.css */
+
+.header {
+  color: white;
+}
+
+.buttoncontainer {
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh; /* Adjust this value as needed to center the buttons vertically */
+}
+
+.circlebutton {
+  text-decoration: none;
+  width: 200px;
+  height: 200px;
+  background-color: var(--color-primary-500);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.circlebutton:hover {
+  color: white;
+  background-color: var(--color-primary-900);
+}
+
+.link {
+  text-decoration: none;
+}
