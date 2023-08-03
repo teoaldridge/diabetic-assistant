@@ -101,6 +101,8 @@ function calculateRecommendedBolus(
   if (bloodGlucose < 3.5) {
     return "Your BG is running low. Please do not take insulin now, enjoy some yummy sweets, and try again after 20 mins.";
   } else {
-    return `${recommendedBolus} units`;
+    return `Correction bolus: ${correctionBolus.toFixed(
+      2
+    )} units. \n Total bolus: ${recommendedBolus.toFixed(2)} units.`;
   }
 }
