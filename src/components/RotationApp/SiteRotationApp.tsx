@@ -125,7 +125,7 @@ const SiteRotationInput: React.FC = () => {
             className={injectionSite === "Back Right Waist" ? "selected" : ""}
             onClick={() => handleInjectionSiteClick("Back Right Waist")}
           >
-            Right Weist
+            Right Waist
           </button>
           <button
             className={
