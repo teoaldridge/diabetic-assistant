@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState, FormEvent } from "react";
 import classes from "./FoodChecker.module.css";
+const appID = process.env.REACT_APP_EDAMAM_APP_ID;
+const appKey = process.env.REACT_APP_EDAMAM_APP_KEY;
 
 interface Food {
   food: {
@@ -25,8 +27,8 @@ const FoodChecker = () => {
         parsed: Food[];
       }>(`https://api.edamam.com/api/food-database/v2/parser`, {
         params: {
-          app_id: "ef55a799", // Replace with your Edamam app ID
-          app_key: "29c343ff5161b831727b76cc63abe625", // Replace with your Edamam app key
+          app_id: appID, 
+          app_key: appKey, 
           ingr: searchTerm,
         },
       });
