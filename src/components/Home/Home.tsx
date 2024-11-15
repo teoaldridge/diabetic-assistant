@@ -16,6 +16,11 @@ const Home: React.FC = () => {
           <button className={classes.circlebutton}>Food Checker</button>
         </Link>
       </div>
+      <div>
+        <h3>Diabuddy Chatbot</h3>
+        <iframe src='https://webchat.botframework.com/embed/diabetes-chat-bot-bot?s=YOUR_SECRET_HERE' style={{ minWidth: '400px', width: '40%', minHeight: '500px' }}
+        ></iframe>
+      </div>
     </div>
   );
 };
