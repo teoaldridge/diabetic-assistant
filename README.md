@@ -28,6 +28,7 @@ The chatbot is configured and created in Azure and uses information from the web
 ![image](https://github.com/teoaldridge/diabetic-assistant/assets/74827533/32b3e49b-0c90-4bff-ab9c-e58b7919d8b0)
 ![image](https://github.com/teoaldridge/diabetic-assistant/assets/74827533/d6cf3ad3-688b-4dcd-a925-a5ce6f35387d)
 ![image](https://github.com/user-attachments/assets/24b069f3-dfff-4293-a2f8-0960cff39622)
+![image](https://github.com/user-attachments/assets/3d354fa5-0e52-488b-874f-bd412e38dd21)
 
 
 
