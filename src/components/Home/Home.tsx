@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import classes from "./Home.module.css";
+const secretKey = process.env.REACT_APP_BOT_SECRET_KEY;
 
 const Home: React.FC = () => {
   return (
@@ -15,6 +16,11 @@ const Home: React.FC = () => {
         <Link to="/foodchecker" className={classes.link}>
           <button className={classes.circlebutton}>Food Checker</button>
         </Link>
+      </div>
+      <div>
+        <h3>Diabuddy Chatbot</h3>
+        <iframe src={`https://webchat.botframework.com/embed/diabetes-chat-bot-bot?s=${secretKey}`} style={{ minWidth: '400px', width: '40%', minHeight: '500px' }}
+        ></iframe>
       </div>
     </div>
   );
