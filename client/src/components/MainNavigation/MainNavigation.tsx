@@ -47,6 +47,16 @@ const MainNavigation: React.FC = () => {
               Food Checker
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Login
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
