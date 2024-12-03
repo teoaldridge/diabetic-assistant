@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import classes from "./Login.module.css";
 
 interface LoginProps {
@@ -12,10 +11,33 @@ const Login: React.FC<LoginProps> = (props) => {
   const [emailError, setEmailError] = useState('')
   const [passwordError, setPasswordError] = useState('')
 
-  const navigate = useNavigate()
-
   const onButtonClick = () => {
-    // You'll update this function later...
+    // Set initial error values to empty
+    setEmailError('')
+    setPasswordError('')
+  
+    // Check if the user has entered both fields correctly
+    if ('' === email) {
+      setEmailError('Please enter your email')
+      return
+    }
+  
+    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+      setEmailError('Please enter a valid email')
+      return
+    }
+  
+    if ('' === password) {
+      setPasswordError('Please enter a password')
+      return
+    }
+  
+    if (password.length < 7) {
+      setPasswordError('The password must be 8 characters or longer')
+      return
+    }
+  
+    // Authentication calls will be made here...
   }
 
   return (
@@ -31,7 +53,7 @@ const Login: React.FC<LoginProps> = (props) => {
           onChange={(ev) => setEmail(ev.target.value)}
           className={classes.inputBox}
         />
-        <label className="errorLabel">{emailError}</label>
+        <label className={classes.errorLabel}>{emailError}</label>
       </div>
       <br />
       <div className={classes.inputContainer}>
@@ -41,7 +63,7 @@ const Login: React.FC<LoginProps> = (props) => {
           onChange={(ev) => setPassword(ev.target.value)}
           className={classes.inputBox}
         />
-        <label className="errorLabel">{passwordError}</label>
+        <label className={classes.errorLabel}>{passwordError}</label>
       </div>
       <br />
       <div className={classes.inputContainer}>
