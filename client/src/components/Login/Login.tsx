@@ -1,37 +1,54 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import classes from "./Login.module.css";
 
 interface LoginProps {
   loggedIn: boolean;
   email: string;
 }
-
 const Login: React.FC<LoginProps> = (props) => {
-  const { loggedIn, email } = props;
-  const navigate = useNavigate();
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
+
+  const navigate = useNavigate()
 
   const onButtonClick = () => {
-    // update this function later
-  };
+    // You'll update this function later...
+  }
 
   return (
-    <div className="mainContainer">
-      <div className={'titleContainer'}>
-        <div>Welcome!</div>
+    <div className={classes.mainContainer}>
+      <div className={classes.titleContainer}>
+        <h1>Login</h1>
       </div>
-      <div>This is the home page.</div>
-      <div className={'buttonContainer'}>
+      <br />
+      <div className={classes.inputContainer}>
         <input
-          className={'inputButton'}
-          type="button"
-          onClick={onButtonClick}
-          value={loggedIn ? 'Log out' : 'Log in'}
+          value={email}
+          placeholder="Enter your email here"
+          onChange={(ev) => setEmail(ev.target.value)}
+          className={classes.inputBox}
         />
-        {loggedIn ? <div>Your email address is {email}</div> : <div />}
+        <label className="errorLabel">{emailError}</label>
+      </div>
+      <br />
+      <div className={classes.inputContainer}>
+        <input
+          value={password}
+          placeholder="Enter your password here"
+          onChange={(ev) => setPassword(ev.target.value)}
+          className={classes.inputBox}
+        />
+        <label className="errorLabel">{passwordError}</label>
+      </div>
+      <br />
+      <div className={classes.inputContainer}>
+        <input className={classes.inputButton} type="button" onClick={onButtonClick} value={'Log in'} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
-
+export default Login
