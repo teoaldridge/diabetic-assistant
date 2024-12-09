@@ -84,12 +84,12 @@ justify-content: center;
   padding-left: 8px;
 }
 
-.registerlink {
+.loginlink {
   color: var(--color-primary-400);
   text-decoration: none;
 }
 
-.registerlink:hover {
+.loginlink:hover {
   color: var(--color-primary-900);
   text-decoration: none;
 }
